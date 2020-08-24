@@ -12,3 +12,7 @@ Este trabajo esta orientado a un control de temperatura y humedad para una camar
 Primero el usuario se encuentra con un selector para setear la temperatura, que inicialmente está a temperatura ambiente para facilitar la carga y elige con que diferencia de temperatura se debera accionar la salida con precision de 1/2 Grado Celcius. Despues setea la humedad, la cual tambien esta inicialmente a nivel ambiente y elige con que diferencia de humedad se debera accionar la salidad con precision 1% en variacion de humedad.
 
 Comenzada la maquina de estado, al detectar una variacion en uno u otro parametro se activa la salida correspondiente ya sea para humedad o para temperatura hasta controlar dicha variacion y regular el sistema, volviendo al estado inicial de la maquina. 
+
+## Maquina de Estado
+
+![](https://cdn.discordapp.com/attachments/729481473752694969/747258768617767014/Diagrama_Maquina_de_Estado.jpg)
