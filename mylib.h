@@ -10,15 +10,22 @@ typedef enum {
   desmhume = 4
 }estados_t;
 
+typedef enum {
+  tset= 0,
+  hset= 1,
+  dt= 2,
+  dh= 3,
+}casos_t;
+
 typedef struct {
-    char T_amb;
     char T_set;
     char deltaT;
-    char H_amb;
     char H_set;
     char deltaH;
 }tyh_t;
 
+char T_amb (void);
+char H_amb (void);
 
 tyh_t inicio_f(void);
 

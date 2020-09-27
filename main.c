@@ -6,7 +6,7 @@ int main (){
     estados_t estados = espera; //Incio de la maquina
     printf("Control de Temperatura y Humedad \n");
     config = inicio_f();
-    printf()
+    
     while (1)
     {
         switch (estado)

@@ -10,38 +10,51 @@ tyh_t inicio_f(void)
 estados_t espera_f(tyh_t config)
 {
     estados_t estado = espera;
-    config.T_amb = leerTemp();
-    config.H_amb = leerHum();
-    printf("En espera ")
+    printf("En espera \n ") 
+        if(T_amb()<T_set-deltaT)                //Calentar
+            return calentar;
+        if(T_amb()>T_set+deltaT)                //Enfriar                                 
+            return enfriar;
+        if(H_amb()<H_set-deltaH)                //Humedifica  
+            return humedif;
+        if(H_amb()>H_set+deltaH)                //Deshumedifica
+            return desmhume;  
+    return espera;
 
-    return ()
 }
 
 estados_t calentar_f(tyh_t config)
 {
     estados_t estado = calentar;
-
-
-    return()
+    T_amb++;
+    printf("Calentando \n");
+    
+    return espera;
 }
 
 estados_t enfriar_f(tyh_t config)
 {
     estados_t estado = enfriar;
-
-    return ()
+    T_amb--;
+    printf("Enfriando \n");
+    
+    return espera;
 }
 
 estados_t humedif_t(tyh_t config)
 {
     estados_t estado = humedif;
-
-    return ()
+    H_amb++;
+    printf("Humedeciendo \n");
+    
+    return espera;
 }
 estados_t desmhume_t(tyh_t config)
 {
     estados_t estado = desmhume;
-
-    return ()
+    H_amb--;
+    printf("Deshumedeciendo \n");
+    
+    return espera;
 }
 
